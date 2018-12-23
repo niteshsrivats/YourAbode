@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+body {
+  margin: 0px 0px 0px 0px;
+  font:'Roboto';
+  font-family: 'Roboto', sans-serif;
+}
+
+.spacer{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 1em; 
+  padding-top: 2vh;
+}
+
+.spacer > div {
+  border: 1px solid black;
+}
+
+#title-bar{
+  background: navy;
+  border: 1px solid black;
+  height: 10%;
+  position: fixed;
+  width: 100%;
+}
+
+.wrapper {
+  color: black;
+  display: grid;
+  font-size: 2.3vw;
+  font-weight: bold;
+  grid-template-columns: 3fr;
+  grid-gap: 1em;
+  line-height: 10vw;
+  text-align: center;
+  background-color: #F5F5E5;
+}
+
+.wrapper > div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid #333;
+  padding: 0.2vw;
+}
+
+.inner{
+  display: grid;
+  grid-template-columns: 1fr;
+  
+}
+
+.inner > div{
+  border: 1px solid black;
+  line-height: 3vw;
+  font-size: 1.7vw;
+  text-align: center;
+}
+
+.owners > div{
+  border: 1px solid black;
+}
+.pic{
+  padding: 10vw;
+  background-image: url(images/About.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90% 100%;
+}
+.owners{
+  padding: 0 4vw 0 4vw ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px #333;
+    text-align: justify;
+}
+.content {
+ 
+  padding: 0 4vw 0 4vw ;
+
+  text-align: justify;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Abode Housing And Co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="../css/upload_property_style.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <script src="../js/upload_property.js"></script>
+    <script src="../js/main.js"></script>
+  </head>
+  <body onload="getButtons();">
+    <div id="title-bar">
+      <div id="signs"></div>
+      <div class="topnav">
+        <a class="active" href="../html/homepage.html">Home</a>
+        <a href="../html/about.html">About</a>
+        <a href="#footer-bar">Contact</a>
+        <div class="search-container">
+          <input type="text" name="search-bar" id="search-bar" placeholder="Search.." name="search" >
+          <button type="button" id="search-button" onclick="search();"><i class="fa fa-search"></i></button>
+        </div>
+      </div> 
+    </div>
+
+    <div class="spacer">
+      <h2 style="text-align:center">List your space with us, and do it for FREE!</h2>
+      <div class="wrapper">
+        <p style="color:black;font-size: medium;">With the global world going mobile to a whole new level, flexibility is the key of working. Make the most of it<br> by channelizing your untapped work zones into updated professional forums. Feature your spaces with us and become a part <br> of the world of flexi-professionals. Attract and engage potential clients by partnering with us!</p>
+        <div class="registration">
+          <div class="top_left">
+            <h2 style="text-align:left;color:rgb(42, 206, 218);">Basic Information</h2>
+            <form method="POST" action="../php/upload_property.php" enctype="multipart/form-data"onsubmit="return validate();">
+              <table>
+                <tr>
+                  <th>
+                    Owner Name:
+                  </th>
+                  <td>
+                    <input type="text" id="i1" name="owner-name" placeholder="Contact Name" size="30"/>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Contact Number:
+                  </th>
+                  <td>
+                    <input type="text" id="i1" name="number" maxlength="10" placeholder="Contact Number" size="30"/>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Type of property:
+                  </th>
+                  <td>
+                    <input type="radio" id="i1" name="type" value="COM" onclick="get_ops();"/>Commercial
+                    <input type="radio" id="i1" name="type" value="RES" onclick="get_ops();"/>Residential
+                  </td>
+                </tr>
+                  <tr><th></th><td>
+                    <div id="extra_op"></div>
+                
+                    </td>
+                </tr>
+                <tr>
+                  <th>
+                    Property Name:
+                  </th>
+                  <td>
+                    <input type="text" id="i1" name="property-name" placeholder="Property Name" size="30"/>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Property Description:
+                  </th>
+                  <td>
+                    <textarea id="i1" name="description" placeholder="Description" rows="10" cols="33">
+                    </textarea>
+                  </td>
+                </tr>
+                  
+                
+              </table>
+          </div>
+          <div class="top_right">
+            <h2 style="text-align:left;color:rgb(42, 206, 218);">Location</h2>
+              <table>
+                <tr>
+                  <th>
+                    Address:
+                  </th>
+                  <td>
+                    <input type="text" id="i1" name="address" placeholder="Building no./Street address" size="30"/>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    City:
+                  </th>
+                  <td>
+                    <select name="city" onchange="validateCity();">
+                      <option value="SEL">City</option>
+                      <option value="BLR">Bangalore</option>
+                      <option value="MAS">Chennai</option>
+                      <option value="DEL">Delhi</option>
+                      <option value="BOM">Mumbai</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    State:
+                  </th>
+                  <td>
+                    <input type="text" id="i1" name="state" placeholder="State" size="30"/>
+                  </td>
+                </tr>
+                  <tr>
+                    <th>
+                      Postal code:
+                    </th>
+                    <td>
+                      <input type="text" id="i1" name="code" placeholder="Postal code" size="30" maxlength="10"/>
+                    </td>
+                </tr>
+                <tr>
+                  <th>
+                    Features:
+                  </th>
+                  <td>
+                    <textarea id="i1" name="features" placeholder="Features" rows="10" cols="33">
+                    </textarea>
+                  </td>
+                </tr>
+              </table>
+              <input type="file" name="fileToUpload" />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-bar">
+      <div>
+        Property fraud is a prevailing malice in the real estate market and YOUR ABODE advises you to stay protected. Check and re-check every detail and confirm the identity of the owner of the property you are interested in, then only proceed further. Stay Safe!
+      </div>
+      <div>
+        <pre>
+          Contact Info:<br>
+          -> Adhyayan Panwar: 7760694184, Ayush@gmail.com <br>
+          -> Ayush Sonthalia: 9731762162, Adhyayan@gmail.com <br>
+          -> Nitesh Srivats:  7795108392, Nitesh@gmail.com
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>

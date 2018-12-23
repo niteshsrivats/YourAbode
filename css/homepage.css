@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+body {
+  font:'Roboto';
+  font-family: 'Roboto', sans-serif;
+  margin: 0px 0px 0px 0px;
+
+}
+
+.slideshow {
+  padding: 11vh 17vw 0vw 17vw;
+}
+
+#slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  line-height: 60vh;
+  color: white;
+  font-size: 6vw;
+  text-align: center;
+}
+
+.spacer{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-gap: 1em; 
+  padding-top: 2vh;
+}
+
+#title-bar{
+  background: navy;
+  border: 1px solid black;
+  height: 10%;
+  position: fixed;
+  width: 100%;
+}
+
+.wrapper {
+  color: white;
+  display: grid;
+  font-size: 2.3vw;
+  font-weight: bold;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  line-height: 15vw;
+  text-align: center;
+}
+
+.wrapper > div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid #333;
+  padding: 0.2vw;
+}
+
+#res-tile-1 { /*residential*/
+  background-image: url(images/PropertiesSale.jpg);
+}
+
+#res-tile-2 {
+  background-image: url(images/Villa.jpg);
+}
+
+#com-tile-1 { /*commercial*/
+  background-image: url(images/MeetingRoom.jpg);
+}
+
+#com-tile-2 {
+  background-image: url(images/EventHall.jpg);
+}
+

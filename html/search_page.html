@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Abode Housing And Co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="../css/style_search_page.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <script src="../js/search_page.js"></script>
+    <script src="../js/main.js"></script>
+  </head>
+  <body onload="getButtons();valid_search();valid_tile();">
+    <div id="title-bar">
+      <div id="signs"></div>
+      <div class="topnav">
+        <a class="active" href="../html/homepage.html">Home</a>
+        <a href="../html/about.html">About</a>
+        <a href="#footer-bar">Contact</a>
+        <div class="search-container">
+          <input type="text" name="search-bar" id="search-bar" placeholder="Search.." name="search" >
+          <button type="button" id="search-button" onclick="search();"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="spacer">
+      <div class="side-bar">
+        REFINE YOUR SEARCH<br>
+        <form>
+          <label>
+            <br>CITY<br>
+            <input type="radio" name="city" value="BLR" />Bangalore<br>
+            <input type="radio" name="city" value="BOM" />Mumbai<br>
+            <input type="radio" name="city" value="MAA" />Chennai<br>
+            <input type="radio" name="city" value="DEL" />Delhi<br>
+            <br>TYPE<br>
+            <input type="radio" name="type" value="RES" id="RES" onclick="get_options();" />Residential
+            <input type="radio" name="type" id="COM" value="COM" onclick="get_options();" />Commercial<br>
+            <br>
+            <div id="options"></div>
+            <br>PRICE RANGE<br>
+            <input type="text" id="min" size="6" maxlength="10" />₹ MIN<br>
+            <input type="text" id="max" size="6" maxlength="10" />₹ MAX<br>
+          </label><br>
+          <input type="button" value="Search" id="sb" onclick="get_properties();" />
+          <input type="reset" />
+        </form>
+      </div>
+
+
+<!--middle section-->
+      <div class="wrapper" id="property-list">
+
+      </div>
+    </div>
+<form method="POST" id="hidden" action="../php/property_page.php">
+  <input type="text" name="house_id" />
+  <input type="text" name="type" />
+  <input type="text" name="option" />
+  <input type="submit" />
+</form>
+<!--last section-->
+    <div id="footer-bar">
+      <div>
+          Property fraud is a prevailing malice in the real estate market and YOUR ABODE advises you to stay protected. Check and re-check every detail and confirm the identity of the owner of the property you are interested in, then only proceed further. Stay Safe!
+      </div>
+      <div>
+        <pre>
+        Contact Info:<br>
+        -> Adhyayan Panwar: 7760694184, Ayush@gmail.com <br>
+        -> Ayush Sonthalia: 9731762162, Adhyayan@gmail.com <br>
+        -> Nitesh Srivats:  7795108392, Nitesh@gmail.com
+      </pre>
+      </div>
+    </div>
+  </body>
+</html>
